@@ -32,6 +32,14 @@ server.DelimiterDataReceived += (sender, msg) => {
             };
 ```
 
+Need to also read data from the server as a client?
+
+```cs
+client.DataReceived += (sender, msg) => {
+                Console.WriteLine("DataReceived: " + msg.MessageString);
+            };
+```
+
 Want to know how many clients are connected to the server?
 
 ```cs
